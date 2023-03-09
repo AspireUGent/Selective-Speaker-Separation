@@ -12,9 +12,13 @@
   
   .banner{
     color: #3265C2;
-    /*background-color: #3265C2;*/
     margin-left: 2%;
+    /*margin-bottom: 0;*/
     float: left;
+  }
+
+  .closer { 
+    line-height: 10px;
   }
 
   .row:after {
@@ -27,6 +31,69 @@
     font-weight: bold;
     text-transform: capitalize;
   }
+
+  body {
+    margin: 20;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  #topBtn:hover {
+    background-color: #3265C2;
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  th {
+    text-align: center;
+  	background-color: #3265C2;
+  	color: white;
+  	height: 30px;
+  }
+
+  td {
+    text-align: center;
+  }
+  
+  tr {
+    border-bottom: 2px solid black;
+  }
+  
+  .original {
+    transform: scale(1);
+    position: inherit;
+    z-index: 0;
+  }
+  
+  .enlarged {
+    transform: scale(2);
+    position: relative;
+    z-index: 100;
+  }
+
+  .reference{
+    font-family: 'Times New Roman';
+    font-size: 12;
+  }
+
+
 </style>
 </head>
 
@@ -36,15 +103,18 @@
    <div class="row">
     <div class="logo"><img src=".\img\logo_ugent_nl.svg"></div>
     <div class="banner">
-      <h1>IDLab - Speech group</h1>
+      <h1 class="closer">ASPIRE</h1>
+      <p class="closer" style="font-size: 80%;">Audio and Signal Processing, Interpretation, and Enhancement@IDLAB</p>
     </div>
   </div>
- </div>
+
+</div>
 
 <div>
+
 <h3>Audio samples </h3>
-<br/>
-Reference: <br/><code>@{A DOA Dependent Feature Extraction for Selective Speaker Separation With a U-Net Architecture}</code>
+
+<em>A DOA Dependent Feature Extraction for Selective Speaker Separation With a U-Net Architecture</em>
 <br/>
 <br/>
 
@@ -57,13 +127,13 @@ Reference: <br/><code>@{A DOA Dependent Feature Extraction for Selective Speaker
 </thead>
 <tbody>
 <tr>
-  <th align="center">
+  <td align="center">
      <audio controls=true  style="width: 100%" src="./audio/mic_chref.wav"></audio>
-  </th>
-  <th align="center">
+  </td>
+  <td align="center">
     <audio controls=true  style="width: 49%" src="./audio/clean_speaker1.wav"></audio>
     <audio controls=true  style="width: 49%" src="./audio/clean_speaker2.wav"></audio>
-  </th>
+  </td>
 </tr>
 </tbody>
 </table>
